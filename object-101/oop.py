@@ -86,7 +86,10 @@ class Character(object):
 
 class Hero(Character):
     def greet(self):
-        print "Hey there"
+        if self.alive:
+            print "I'm alive!"
+        else:
+            print "Dying"
 
 class Enemy(Character):
     def greet(self):
