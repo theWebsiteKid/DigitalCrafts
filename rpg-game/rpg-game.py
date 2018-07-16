@@ -11,13 +11,17 @@ def game():
         
         def attack(self, enemy):
             # Hero attacks enemy
-            enemy.health -= self.power
-            print "%s attacked %s" % (self.name, enemy.name)
+            enemy.receive_damage(self.infliction())
             if enemy.health <= 0:
                 print "The enemy is dead."
+            else:
+                print "%s attacked %s" % (self.name, enemy.name)
 
-        def receive_damage():
-            pass
+        def infliction(self):
+            return self.power
+            
+        def receive_damage(self, damage):
+            self.health -= damage
 
     class Hero(Character):
         def __init__(self):
