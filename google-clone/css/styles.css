@@ -1,5 +1,5 @@
 /* Global Styles
-***************/
+*******************/
 html, body {
     width: 100%;
     height: 100%;
@@ -22,15 +22,11 @@ a {
     color: #609;
 }
 
-span {
-    margin: 0;
-    padding: -1.25em;
-}
-
 /* Containers
-***************/
+*******************/
 .container {
     width: 100%;
+    max-width: 99%;
     height: 100%;
 }
 
@@ -40,7 +36,7 @@ span {
 }
 
 /* Sections
-***************/
+*******************/
 .header {
     display: inline-block;
     width: 100%;
@@ -59,6 +55,7 @@ span {
 
 .footer {
     position: relative;
+    bottom: 1px;
     display: inline-block;
     background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
@@ -68,10 +65,10 @@ span {
 }
 
 /* Assets
-***************/
+*******************/
 .logo {
     font-size: 8.5em;
-    margin: 10% 0 0;
+    margin: 12% 0 0;
     text-align: center;
 } .logo p {
     display: inline;
@@ -102,7 +99,7 @@ span {
     min-width: 54px;
     padding: 12px 18px;
     text-align: center;
-} .btn .sign-in {
+} .btn.sign-in {
     border: 1px solid #4285f4;
     font-weight: bold;
     outline: none;
@@ -113,7 +110,7 @@ span {
 }
 
 /* Utilities
-***************/
+*******************/
 .blue {
     color: #4688F1;
 }
@@ -130,10 +127,19 @@ span {
     color: #3AA757;
 }
 
-.pull-right {
-    text-align: right;
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.spacer {
+    flex: 1;
 }
 
 .pull-left {
     text-align: left;
+}
+
+.pull-right {
+    text-align: right;
 }
