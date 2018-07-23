@@ -1,7 +1,7 @@
 // init new list (map) with alphabet
 var map = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 // init cipher function
-var cipher = function (input = 'Hello world') {
+var cipher = function (input) {
     // init phrase variable with
     // lowercased input string
     var inputLowerCase = input.toLowerCase();
@@ -14,7 +14,7 @@ var cipher = function (input = 'Hello world') {
     console.log(letters);
     return input;
 };
-// call cipher function
-cipher();
-// test cipher function
-console.assert(typeof(cipher()) === "string", "function should return string");
+// test it! init testInput variable
+var testInput = 'Hello, World.';
+// test #1: returns a string?
+console.assert(typeof(cipher(testInput)) === 'string', 'function should return string');
