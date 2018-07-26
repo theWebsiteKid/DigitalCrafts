@@ -57,6 +57,10 @@ body {
     transform: translate(2px, 2px);
 }
 
+.listItem {
+    margin: 1.0em;
+}
+
 .lightBoxImage {
     width: 40em;
     height: 40em;
@@ -69,6 +73,11 @@ ul {
     padding: 0 2.5em;
 }
 
+.caption {
+    font-size: 1.5em;
+}
+
 .footer-text {
     text-align: center;
+    font-size: 1.1em;
 }

@@ -8,10 +8,13 @@ var images = [
     { caption: "Cambodia", url: "https://www.theultimatetravelcompany.co.uk/wp-content/uploads/2015/04/shutterstock_289362896-500x500.gif"},
     { caption: "Berlin", url: "http://cdn.web30s.vn/datafiles/5008/upload/images/14776258948456_Berlin-500x500.jpg"}
 ];
-// init container variable
+// init container variabled
 var container = document.querySelector('.image-list');
-// 
-for (var image of images) {
+var modal = document.querySelector('.modal');
+// imageIndex is current index
+var backdrop = document.querySelector('.backdrop');
+// loop through images, add to DOM dynamically
+images.forEach( function (image, imageIndex) {
     // image
     var newImage = document.createElement('img');
     newImage.setAttribute('src', image.url);
@@ -19,28 +22,32 @@ for (var image of images) {
     // caption
     var caption = document.createElement('p');
     caption.textContent = image.caption;
+    caption.classList.add('caption');
     // list item
     var listItem = document.createElement('li');
     listItem.appendChild(newImage);
     listItem.appendChild(caption);
+    listItem.classList.add('listItem');
+
     // light box image
     var lightBoxImage = document.querySelector('.lightBoxImage');
     // on click
     listItem.addEventListener('click', function () {
-        lightBoxImage.setAttribute('src', (event.target.src))
+        lightBoxImage.setAttribute('src', (image.url));
         modal.classList.toggle('open');
         backdrop.classList.toggle('open');
     });
     // 
     container.appendChild(listItem);
-};
+    var currentImage = newImage.getAttribute('src');
+    console.log(currentImage);
+});
 // 
- var modal = document.querySelector('.modal');
- var backdrop = document.querySelector('.backdrop');
-//
  var closeModal = function () {
      modal.classList.toggle('open');
      backdrop.classList.toggle('open');
  };
-//
+// 
 backdrop.addEventListener('click', closeModal);
+// modal handles carousal
+currentImg = images[2];
