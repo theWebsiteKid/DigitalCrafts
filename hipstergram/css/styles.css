@@ -15,7 +15,6 @@ body {
 /* Modal
 ********************/
 .modal {
-    display: none;
     position: fixed;
     z-index: 200;
     background: #fff;
@@ -62,8 +61,8 @@ body {
 }
 
 .lightBoxImage {
-    width: 40em;
-    height: 40em;
+    width: 30em;
+    height: 30em;
 }
 
 ul {
